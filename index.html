@@ -1,20 +1,10 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>18TH | RAGE:MP Modpacks</title>
-
-    <meta name="description" content="18TH - Modpack-uri pentru RAGE:MP">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,103 +13,51 @@
 
     <!-- NAVBAR -->
     <header class="navbar">
-        <div class="nav-container">
-
-            <a href="#home" class="logo">
-                18<span>TH</span>
-            </a>
-
-            <nav>
-                <a href="#home">HOME</a>
-                <a href="#modpacks">MODPACKS</a>
-                <a href="#about">DESPRE</a>
-
-                <a
-                    href="#"
-                    target="_blank"
-                    class="discord-nav"
-                >
-                    DISCORD
-                </a>
-            </nav>
-
-            <button class="menu-button" onclick="toggleMenu()">
-                ☰
-            </button>
-
+        <div class="logo">
+            <span>18TH</span>
+            <small>RAGE:MP MODPACKS</small>
         </div>
+
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#modpacks">MODPACKS</a>
+        </nav>
     </header>
 
 
     <!-- HERO -->
-    <section id="home" class="hero">
-
-        <div class="hero-overlay"></div>
+    <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <div class="small-title">
-                RAGE:MP COMMUNITY
-            </div>
+            <p class="hero-small">18TH COMMUNITY</p>
 
             <h1>
-                18<span>TH</span>
+                RAGE:MP<br>
+                <span>MODPACKS</span>
             </h1>
 
-            <p>
-                Modpack-uri create pentru o experiență
-                RAGE:MP cât mai bună.
+            <p class="hero-description">
+                Discover our collection of high-quality RAGE:MP modpacks.
+                Choose a modpack and explore screenshots before downloading.
             </p>
 
-            <div class="hero-buttons">
+            <a href="#modpacks" class="hero-button">
+                EXPLORE MODPACKS
+            </a>
 
-                <a
-                    href="#modpacks"
-                    class="btn btn-primary"
-                >
-                    VEZI MODPACK-URILE
-                </a>
-
-                <a
-                    href="#"
-                    target="_blank"
-                    class="btn btn-secondary"
-                >
-                    INTRĂ PE DISCORD
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="scroll-down">
-            ↓
         </div>
 
     </section>
 
 
     <!-- MODPACKS -->
-    <section id="modpacks" class="section">
+    <section class="modpacks-section" id="modpacks">
 
-        <div class="section-header">
-
-            <span class="section-number">
-                01
-            </span>
-
-            <div>
-
-                <p class="section-label">
-                    DOWNLOAD
-                </p>
-
-                <h2>
-                    MODPACK-URI
-                </h2>
-
-            </div>
-
+        <div class="section-title">
+            <p>18TH COLLECTION</p>
+            <h2>MODPACKS</h2>
+            <span></span>
         </div>
 
 
@@ -129,42 +67,37 @@
             <!-- MODPACK 1 -->
             <article class="modpack-card">
 
-                <div class="card-image modpack-one">
+                <div class="modpack-image">
 
-                    <div class="card-overlay"></div>
+                    <img
+                        src="images/modpack1/cover.jpg"
+                        alt="Modpack 1"
+                    >
 
-                    <span class="version">
-                        RAGE:MP
-                    </span>
-
-                    <div class="card-image-title">
-                        MODPACK <strong>01</strong>
+                    <div class="image-overlay">
+                        <button
+                            onclick="openModpack(0)"
+                            class="view-button"
+                        >
+                            VIEW MODPACK
+                        </button>
                     </div>
 
                 </div>
 
-                <div class="card-content">
+                <div class="modpack-info">
 
-                    <h3>
-                        MODPACK #1
-                    </h3>
-
-                    <p>
-                        Modpack pentru comunitatea 18TH.
-                    </p>
-
-                    <div class="card-info">
-                        <span>● RAGE:MP</span>
-                        <span>● PC</span>
+                    <div>
+                        <p class="modpack-number">MODPACK 01</p>
+                        <h3>18TH MODPACK</h3>
                     </div>
 
-                    <a
-                        href="#"
-                        class="download-button"
+                    <button
+                        onclick="openModpack(0)"
+                        class="arrow-button"
                     >
-                        DOWNLOAD
-                        <span>↓</span>
-                    </a>
+                        →
+                    </button>
 
                 </div>
 
@@ -174,42 +107,37 @@
             <!-- MODPACK 2 -->
             <article class="modpack-card">
 
-                <div class="card-image modpack-two">
+                <div class="modpack-image">
 
-                    <div class="card-overlay"></div>
+                    <img
+                        src="images/modpack2/cover.jpg"
+                        alt="Modpack 2"
+                    >
 
-                    <span class="version">
-                        RAGE:MP
-                    </span>
-
-                    <div class="card-image-title">
-                        MODPACK <strong>02</strong>
+                    <div class="image-overlay">
+                        <button
+                            onclick="openModpack(1)"
+                            class="view-button"
+                        >
+                            VIEW MODPACK
+                        </button>
                     </div>
 
                 </div>
 
-                <div class="card-content">
+                <div class="modpack-info">
 
-                    <h3>
-                        MODPACK #2
-                    </h3>
-
-                    <p>
-                        Modpack pentru comunitatea 18TH.
-                    </p>
-
-                    <div class="card-info">
-                        <span>● RAGE:MP</span>
-                        <span>● PC</span>
+                    <div>
+                        <p class="modpack-number">MODPACK 02</p>
+                        <h3>18TH MODPACK</h3>
                     </div>
 
-                    <a
-                        href="#"
-                        class="download-button"
+                    <button
+                        onclick="openModpack(1)"
+                        class="arrow-button"
                     >
-                        DOWNLOAD
-                        <span>↓</span>
-                    </a>
+                        →
+                    </button>
 
                 </div>
 
@@ -219,42 +147,37 @@
             <!-- MODPACK 3 -->
             <article class="modpack-card">
 
-                <div class="card-image modpack-three">
+                <div class="modpack-image">
 
-                    <div class="card-overlay"></div>
+                    <img
+                        src="images/modpack3/cover.jpg"
+                        alt="Modpack 3"
+                    >
 
-                    <span class="version">
-                        RAGE:MP
-                    </span>
-
-                    <div class="card-image-title">
-                        MODPACK <strong>03</strong>
+                    <div class="image-overlay">
+                        <button
+                            onclick="openModpack(2)"
+                            class="view-button"
+                        >
+                            VIEW MODPACK
+                        </button>
                     </div>
 
                 </div>
 
-                <div class="card-content">
+                <div class="modpack-info">
 
-                    <h3>
-                        MODPACK #3
-                    </h3>
-
-                    <p>
-                        Modpack pentru comunitatea 18TH.
-                    </p>
-
-                    <div class="card-info">
-                        <span>● RAGE:MP</span>
-                        <span>● PC</span>
+                    <div>
+                        <p class="modpack-number">MODPACK 03</p>
+                        <h3>18TH MODPACK</h3>
                     </div>
 
-                    <a
-                        href="#"
-                        class="download-button"
+                    <button
+                        onclick="openModpack(2)"
+                        class="arrow-button"
                     >
-                        DOWNLOAD
-                        <span>↓</span>
-                    </a>
+                        →
+                    </button>
 
                 </div>
 
@@ -264,42 +187,37 @@
             <!-- MODPACK 4 -->
             <article class="modpack-card">
 
-                <div class="card-image modpack-four">
+                <div class="modpack-image">
 
-                    <div class="card-overlay"></div>
+                    <img
+                        src="images/modpack4/cover.jpg"
+                        alt="Modpack 4"
+                    >
 
-                    <span class="version">
-                        RAGE:MP
-                    </span>
-
-                    <div class="card-image-title">
-                        MODPACK <strong>04</strong>
+                    <div class="image-overlay">
+                        <button
+                            onclick="openModpack(3)"
+                            class="view-button"
+                        >
+                            VIEW MODPACK
+                        </button>
                     </div>
 
                 </div>
 
-                <div class="card-content">
+                <div class="modpack-info">
 
-                    <h3>
-                        MODPACK #4
-                    </h3>
-
-                    <p>
-                        Modpack pentru comunitatea 18TH.
-                    </p>
-
-                    <div class="card-info">
-                        <span>● RAGE:MP</span>
-                        <span>● PC</span>
+                    <div>
+                        <p class="modpack-number">MODPACK 04</p>
+                        <h3>18TH MODPACK</h3>
                     </div>
 
-                    <a
-                        href="#"
-                        class="download-button"
+                    <button
+                        onclick="openModpack(3)"
+                        class="arrow-button"
                     >
-                        DOWNLOAD
-                        <span>↓</span>
-                    </a>
+                        →
+                    </button>
 
                 </div>
 
@@ -309,42 +227,37 @@
             <!-- MODPACK 5 -->
             <article class="modpack-card">
 
-                <div class="card-image modpack-five">
+                <div class="modpack-image">
 
-                    <div class="card-overlay"></div>
+                    <img
+                        src="images/modpack5/cover.jpg"
+                        alt="Modpack 5"
+                    >
 
-                    <span class="version">
-                        RAGE:MP
-                    </span>
-
-                    <div class="card-image-title">
-                        MODPACK <strong>05</strong>
+                    <div class="image-overlay">
+                        <button
+                            onclick="openModpack(4)"
+                            class="view-button"
+                        >
+                            VIEW MODPACK
+                        </button>
                     </div>
 
                 </div>
 
-                <div class="card-content">
+                <div class="modpack-info">
 
-                    <h3>
-                        MODPACK #5
-                    </h3>
-
-                    <p>
-                        Modpack pentru comunitatea 18TH.
-                    </p>
-
-                    <div class="card-info">
-                        <span>● RAGE:MP</span>
-                        <span>● PC</span>
+                    <div>
+                        <p class="modpack-number">MODPACK 05</p>
+                        <h3>18TH MODPACK</h3>
                     </div>
 
-                    <a
-                        href="#"
-                        class="download-button"
+                    <button
+                        onclick="openModpack(4)"
+                        class="arrow-button"
                     >
-                        DOWNLOAD
-                        <span>↓</span>
-                    </a>
+                        →
+                    </button>
 
                 </div>
 
@@ -354,42 +267,37 @@
             <!-- MODPACK 6 -->
             <article class="modpack-card">
 
-                <div class="card-image modpack-six">
+                <div class="modpack-image">
 
-                    <div class="card-overlay"></div>
+                    <img
+                        src="images/modpack6/cover.jpg"
+                        alt="Modpack 6"
+                    >
 
-                    <span class="version">
-                        RAGE:MP
-                    </span>
-
-                    <div class="card-image-title">
-                        MODPACK <strong>06</strong>
+                    <div class="image-overlay">
+                        <button
+                            onclick="openModpack(5)"
+                            class="view-button"
+                        >
+                            VIEW MODPACK
+                        </button>
                     </div>
 
                 </div>
 
-                <div class="card-content">
+                <div class="modpack-info">
 
-                    <h3>
-                        MODPACK #6
-                    </h3>
-
-                    <p>
-                        Modpack pentru comunitatea 18TH.
-                    </p>
-
-                    <div class="card-info">
-                        <span>● RAGE:MP</span>
-                        <span>● PC</span>
+                    <div>
+                        <p class="modpack-number">MODPACK 06</p>
+                        <h3>18TH MODPACK</h3>
                     </div>
 
-                    <a
-                        href="#"
-                        class="download-button"
+                    <button
+                        onclick="openModpack(5)"
+                        class="arrow-button"
                     >
-                        DOWNLOAD
-                        <span>↓</span>
-                    </a>
+                        →
+                    </button>
 
                 </div>
 
@@ -401,84 +309,96 @@
     </section>
 
 
-    <!-- ABOUT -->
-    <section id="about" class="about-section">
+    <!-- MODPACK MODAL -->
+    <div id="modpackModal" class="modal">
 
-        <div class="about-container">
+        <div class="modal-content">
 
-            <div class="about-text">
+            <button
+                class="close-modal"
+                onclick="closeModpack()"
+            >
+                ×
+            </button>
 
-                <span class="section-number">
-                    02
-                </span>
 
-                <p class="section-label">
-                    DESPRE NOI
-                </p>
+            <div class="modal-gallery">
 
-                <h2>
-                    BUILT FOR<br>
-                    <span>RAGE:MP</span>
-                </h2>
-
-                <p class="about-description">
-                    18TH este o comunitate dedicată experienței
-                    RAGE:MP. Aici găsești modpack-urile necesare
-                    pentru a te conecta și a te bucura de server.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank"
-                    class="btn btn-primary"
+                <button
+                    class="gallery-arrow left"
+                    onclick="previousImage()"
                 >
-                    DISCORD
-                </a>
+                    ‹
+                </button>
+
+                <img
+                    id="galleryImage"
+                    src=""
+                    alt="Modpack screenshot"
+                >
+
+                <button
+                    class="gallery-arrow right"
+                    onclick="nextImage()"
+                >
+                    ›
+                </button>
 
             </div>
 
 
-            <div class="stats">
+            <div class="gallery-counter">
+                <span id="imageNumber">1</span>
+                /
+                <span id="imageTotal">1</span>
+            </div>
 
-                <div class="stat">
-                    <strong>06</strong>
-                    <span>MODPACKS</span>
-                </div>
 
-                <div class="stat">
-                    <strong>RAGE</strong>
-                    <span>MULTIPLAYER</span>
-                </div>
+            <div class="modal-info">
 
-                <div class="stat">
-                    <strong>18TH</strong>
-                    <span>COMMUNITY</span>
-                </div>
+                <p id="modalNumber" class="modal-number">
+                    MODPACK 01
+                </p>
+
+                <h2 id="modalTitle">
+                    18TH MODPACK
+                </h2>
+
+                <p id="modalDescription">
+                    Modpack description.
+                </p>
+
+
+                <a
+                    id="downloadButton"
+                    href="#"
+                    target="_blank"
+                    class="download-button"
+                >
+                    DOWNLOAD MODPACK
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
 
     <!-- FOOTER -->
     <footer>
 
         <div class="footer-logo">
-            18<span>TH</span>
+            18TH
         </div>
 
         <p>
-            © 2026 18TH. Toate drepturile rezervate.
+            RAGE:MP MODPACKS
         </p>
 
-        <a
-            href="#"
-            target="_blank"
-        >
-            DISCORD →
-        </a>
+        <span>
+            © 2026 18TH. All rights reserved.
+        </span>
 
     </footer>
 
