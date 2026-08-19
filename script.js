@@ -18,9 +18,11 @@ const MODPACKS = [
     size: "—",
     download: "https://example.com/modpack-1",
     images: [
-      "assets/images/modpacks/mp1-1.svg",
-      "assets/images/modpacks/mp1-2.svg",
-      "assets/images/modpacks/mp1-3.svg",
+      "assets/images/modpacks/mp1-1.jpg",
+      "assets/images/modpacks/mp1-2.jpg",
+      "assets/images/modpacks/mp1-3.jpg",
+      "assets/images/modpacks/mp1-4.jpg",
+      "assets/images/modpacks/mp1-3.jpg",
       "assets/images/modpacks/mp1-cover.svg"
     ]
   },
