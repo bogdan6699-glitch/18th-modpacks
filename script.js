@@ -1,808 +1,356 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* ==========================================
+   MODPACK DATA
+========================================== */
 
+const modpacks = [
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    {
+        number: "MODPACK 01",
 
+        title: "18TH MODPACK",
 
-html {
-    scroll-behavior: smooth;
-}
+        description:
+            "High-quality RAGE:MP modpack created for a better gaming experience.",
 
+        download:
+            "https://example.com/download-modpack-1",
 
-body {
-    background: #080808;
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
+        images: [
+            "images/modpack1/1.jpg",
+            "images/modpack1/2.jpg",
+            "images/modpack1/3.jpg",
+            "images/modpack1/4.jpg"
+        ]
+    },
 
 
-/* =========================
-   NAVBAR
-========================= */
+    {
+        number: "MODPACK 02",
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+        title: "18TH MODPACK",
 
-    width: 100%;
-    height: 80px;
+        description:
+            "A custom RAGE:MP modpack with improved visuals and optimized performance.",
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        download:
+            "https://example.com/download-modpack-2",
 
-    padding: 0 7%;
+        images: [
+            "images/modpack2/1.jpg",
+            "images/modpack2/2.jpg",
+            "images/modpack2/3.jpg"
+        ]
+    },
 
-    background: rgba(5, 5, 5, 0.85);
-    backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    {
+        number: "MODPACK 03",
 
-    z-index: 1000;
-}
+        title: "18TH MODPACK",
 
+        description:
+            "Modern RAGE:MP modifications designed for an immersive experience.",
 
-.logo {
-    display: flex;
-    flex-direction: column;
-}
+        download:
+            "https://example.com/download-modpack-3",
 
+        images: [
+            "images/modpack3/1.jpg",
+            "images/modpack3/2.jpg",
+            "images/modpack3/3.jpg"
+        ]
+    },
 
-.logo span {
-    font-size: 25px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
 
+    {
+        number: "MODPACK 04",
 
-.logo small {
-    font-size: 8px;
-    letter-spacing: 2px;
-    color: #888;
-}
+        title: "18TH MODPACK",
 
+        description:
+            "A complete visual modpack for RAGE:MP.",
 
-.navbar nav {
-    display: flex;
-    gap: 35px;
-}
+        download:
+            "https://example.com/download-modpack-4",
 
+        images: [
+            "images/modpack4/1.jpg",
+            "images/modpack4/2.jpg",
+            "images/modpack4/3.jpg"
+        ]
+    },
 
-.navbar nav a {
-    color: #aaa;
-    text-decoration: none;
 
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    {
+        number: "MODPACK 05",
 
-    transition: 0.3s;
-}
+        title: "18TH MODPACK",
 
+        description:
+            "Optimized RAGE:MP modpack with a clean and modern visual style.",
 
-.navbar nav a:hover {
-    color: #ffffff;
-}
+        download:
+            "https://example.com/download-modpack-5",
 
+        images: [
+            "images/modpack5/1.jpg",
+            "images/modpack5/2.jpg",
+            "images/modpack5/3.jpg"
+        ]
+    },
 
-/* =========================
-   HERO
-========================= */
 
-.hero {
-    min-height: 100vh;
+    {
+        number: "MODPACK 06",
 
-    display: flex;
-    align-items: center;
+        title: "18TH MODPACK",
 
-    padding: 120px 8%;
+        description:
+            "Premium RAGE:MP modpack for players looking for a fresh experience.",
 
-    position: relative;
+        download:
+            "https://example.com/download-modpack-6",
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.95),
-            rgba(0,0,0,0.65),
-            rgba(0,0,0,0.2)
-        ),
-        url("images/hero.jpg");
-
-    background-size: cover;
-    background-position: center;
-}
-
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 180px;
-
-    background: linear-gradient(
-        transparent,
-        #080808
-    );
-}
-
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-
-    max-width: 700px;
-}
-
-
-.hero-small {
-    color: #888;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 20px;
-}
-
-
-.hero h1 {
-    font-size: clamp(55px, 8vw, 110px);
-
-    line-height: 0.9;
-
-    font-weight: 900;
-
-    letter-spacing: -5px;
-}
-
-
-.hero h1 span {
-    color: #777;
-}
-
-
-.hero-description {
-    color: #aaa;
-
-    max-width: 550px;
-
-    margin-top: 30px;
-
-    line-height: 1.7;
-
-    font-size: 14px;
-}
-
-
-.hero-button {
-    display: inline-block;
-
-    margin-top: 35px;
-
-    padding: 16px 28px;
-
-    background: #ffffff;
-    color: #000000;
-
-    text-decoration: none;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    transition: 0.3s;
-}
-
-
-.hero-button:hover {
-    background: #aaa;
-    transform: translateY(-3px);
-}
-
-
-/* =========================
-   SECTION
-========================= */
-
-.modpacks-section {
-    padding: 100px 7% 130px;
-}
-
-
-.section-title {
-    margin-bottom: 60px;
-}
-
-
-.section-title p {
-    color: #777;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 10px;
-}
-
-
-.section-title h2 {
-    font-size: 50px;
-    font-weight: 900;
-    letter-spacing: -2px;
-}
-
-
-.section-title span {
-    display: block;
-
-    width: 60px;
-    height: 3px;
-
-    background: #fff;
-
-    margin-top: 20px;
-}
-
-
-/* =========================
-   MODPACK GRID
-========================= */
-
-.modpacks-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 30px;
-}
-
-
-.modpack-card {
-    background: #111;
-
-    border: 1px solid rgba(255,255,255,0.07);
-
-    overflow: hidden;
-
-    transition: 0.4s;
-}
-
-
-.modpack-card:hover {
-    transform: translateY(-8px);
-
-    border-color:
-        rgba(255,255,255,0.2);
-}
-
-
-.modpack-image {
-    position: relative;
-
-    height: 350px;
-
-    overflow: hidden;
-}
-
-
-.modpack-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: 0.5s;
-}
-
-
-.modpack-card:hover
-.modpack-image img {
-    transform: scale(1.06);
-}
-
-
-.image-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-        rgba(0,0,0,0.65);
-
-    opacity: 0;
-
-    transition: 0.3s;
-}
-
-
-.modpack-card:hover
-.image-overlay {
-    opacity: 1;
-}
-
-
-.view-button {
-    border: 1px solid #fff;
-
-    background: transparent;
-
-    color: #fff;
-
-    padding: 14px 24px;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-.view-button:hover {
-    background: #fff;
-    color: #000;
-}
-
-
-.modpack-info {
-    padding: 24px;
-
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.modpack-number {
-    color: #666;
-
-    font-size: 9px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 7px;
-}
-
-
-.modpack-info h3 {
-    font-size: 18px;
-    font-weight: 800;
-}
-
-
-.arrow-button {
-    width: 45px;
-    height: 45px;
-
-    border: 1px solid #333;
-
-    background: transparent;
-
-    color: white;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-.arrow-button:hover {
-    background: #fff;
-    color: #000;
-}
-
-
-/* =========================
-   MODAL
-========================= */
-
-.modal {
-    position: fixed;
-
-    inset: 0;
-
-    background: rgba(0,0,0,0.9);
-
-    backdrop-filter: blur(12px);
-
-    display: none;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 30px;
-
-    z-index: 2000;
-}
-
-
-.modal.active {
-    display: flex;
-}
-
-
-.modal-content {
-    width: min(1100px, 100%);
-
-    max-height: 95vh;
-
-    overflow-y: auto;
-
-    background: #0e0e0e;
-
-    border: 1px solid #2a2a2a;
-
-    position: relative;
-
-    animation: modalIn 0.3s ease;
-}
-
-
-@keyframes modalIn {
-
-    from {
-        opacity: 0;
-        transform: scale(0.95);
+        images: [
+            "images/modpack6/1.jpg",
+            "images/modpack6/2.jpg",
+            "images/modpack6/3.jpg"
+        ]
     }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+];
 
+
+/* ==========================================
+   CURRENT GALLERY
+========================================== */
+
+let currentModpack = 0;
+
+let currentImage = 0;
+
+
+/* ==========================================
+   ELEMENTS
+========================================== */
+
+const modal =
+    document.getElementById("modpackModal");
+
+const galleryImage =
+    document.getElementById("galleryImage");
+
+const imageNumber =
+    document.getElementById("imageNumber");
+
+const imageTotal =
+    document.getElementById("imageTotal");
+
+const modalNumber =
+    document.getElementById("modalNumber");
+
+const modalTitle =
+    document.getElementById("modalTitle");
+
+const modalDescription =
+    document.getElementById("modalDescription");
+
+const downloadButton =
+    document.getElementById("downloadButton");
+
+
+/* ==========================================
+   OPEN MODPACK
+========================================== */
+
+function openModpack(index) {
+
+    currentModpack = index;
+
+    currentImage = 0;
+
+    const modpack =
+        modpacks[currentModpack];
+
+
+    modalNumber.textContent =
+        modpack.number;
+
+
+    modalTitle.textContent =
+        modpack.title;
+
+
+    modalDescription.textContent =
+        modpack.description;
+
+
+    downloadButton.href =
+        modpack.download;
+
+
+    imageTotal.textContent =
+        modpack.images.length;
+
+
+    updateGallery();
+
+
+    modal.classList.add("active");
+
+
+    document.body.style.overflow =
+        "hidden";
 }
 
 
-.close-modal {
-    position: absolute;
+/* ==========================================
+   CLOSE MODPACK
+========================================== */
 
-    top: 15px;
-    right: 15px;
+function closeModpack() {
 
-    width: 45px;
-    height: 45px;
+    modal.classList.remove("active");
 
-    background: rgba(0,0,0,0.7);
-
-    border: 1px solid #444;
-
-    color: white;
-
-    font-size: 28px;
-
-    cursor: pointer;
-
-    z-index: 10;
+    document.body.style.overflow =
+        "";
 }
 
 
-.close-modal:hover {
-    background: white;
-    color: black;
+/* ==========================================
+   UPDATE IMAGE
+========================================== */
+
+function updateGallery() {
+
+    const modpack =
+        modpacks[currentModpack];
+
+
+    galleryImage.src =
+        modpack.images[currentImage];
+
+
+    imageNumber.textContent =
+        currentImage + 1;
+
+
+    imageTotal.textContent =
+        modpack.images.length;
 }
 
 
-/* =========================
-   GALLERY
-========================= */
+/* ==========================================
+   NEXT IMAGE
+========================================== */
 
-.modal-gallery {
-    height: 550px;
+function nextImage() {
 
-    background: #050505;
+    const modpack =
+        modpacks[currentModpack];
 
-    position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    currentImage++;
 
 
-.modal-gallery img {
-    width: 100%;
-    height: 100%;
+    if (
+        currentImage >=
+        modpack.images.length
+    ) {
 
-    object-fit: contain;
-}
+        currentImage = 0;
 
-
-.gallery-arrow {
-    position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 55px;
-    height: 55px;
-
-    border-radius: 50%;
-
-    border: 1px solid #444;
-
-    background: rgba(0,0,0,0.8);
-
-    color: white;
-
-    font-size: 35px;
-
-    cursor: pointer;
-
-    z-index: 5;
-
-    transition: 0.3s;
-}
-
-
-.gallery-arrow:hover {
-    background: white;
-    color: black;
-}
-
-
-.gallery-arrow.left {
-    left: 20px;
-}
-
-
-.gallery-arrow.right {
-    right: 20px;
-}
-
-
-.gallery-counter {
-    text-align: center;
-
-    color: #777;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    padding-top: 15px;
-}
-
-
-/* =========================
-   MODAL INFO
-========================= */
-
-.modal-info {
-    padding: 35px;
-}
-
-
-.modal-number {
-    color: #666;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 10px;
-}
-
-
-.modal-info h2 {
-    font-size: 35px;
-
-    font-weight: 900;
-
-    margin-bottom: 15px;
-}
-
-
-.modal-info > p:not(.modal-number) {
-    color: #888;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-
-    max-width: 700px;
-
-    margin-bottom: 25px;
-}
-
-
-.download-button {
-    display: inline-block;
-
-    background: #fff;
-
-    color: #000;
-
-    text-decoration: none;
-
-    padding: 16px 25px;
-
-    font-size: 11px;
-
-    font-weight: 900;
-
-    letter-spacing: 1px;
-
-    transition: 0.3s;
-}
-
-
-.download-button:hover {
-    background: #aaa;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    border-top: 1px solid #1d1d1d;
-
-    padding: 60px 7%;
-
-    text-align: center;
-}
-
-
-.footer-logo {
-    font-size: 35px;
-
-    font-weight: 900;
-
-    letter-spacing: 5px;
-}
-
-
-footer p {
-    color: #666;
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    margin-top: 8px;
-}
-
-
-footer span {
-    display: block;
-
-    color: #444;
-
-    font-size: 10px;
-
-    margin-top: 30px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        padding: 0 5%;
     }
 
 
-    .navbar nav {
-        gap: 15px;
-    }
-
-
-    .navbar nav a {
-        font-size: 9px;
-    }
-
-
-    .hero {
-        padding: 120px 6%;
-    }
-
-
-    .hero h1 {
-        letter-spacing: -3px;
-    }
-
-
-    .modpacks-section {
-        padding: 80px 5%;
-    }
-
-
-    .modpacks-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .modpack-image {
-        height: 260px;
-    }
-
-
-    .modal {
-        padding: 10px;
-    }
-
-
-    .modal-gallery {
-        height: 350px;
-    }
-
-
-    .modal-info {
-        padding: 25px;
-    }
-
-
-    .modal-info h2 {
-        font-size: 27px;
-    }
-
+    updateGallery();
 }
 
 
-@media (max-width: 500px) {
+/* ==========================================
+   PREVIOUS IMAGE
+========================================== */
 
-    .navbar nav {
-        display: none;
+function previousImage() {
+
+    const modpack =
+        modpacks[currentModpack];
+
+
+    currentImage--;
+
+
+    if (currentImage < 0) {
+
+        currentImage =
+            modpack.images.length - 1;
+
     }
 
 
-    .hero h1 {
-        font-size: 52px;
-    }
-
-
-    .hero-description {
-        font-size: 13px;
-    }
-
-
-    .section-title h2 {
-        font-size: 40px;
-    }
-
-
-    .modal-gallery {
-        height: 280px;
-    }
-
-
-    .gallery-arrow {
-        width: 42px;
-        height: 42px;
-
-        font-size: 25px;
-    }
-
+    updateGallery();
 }
+
+
+/* ==========================================
+   CLOSE WHEN CLICKING OUTSIDE
+========================================== */
+
+modal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target === modal
+        ) {
+
+            closeModpack();
+
+        }
+
+    }
+);
+
+
+/* ==========================================
+   ESC KEY
+========================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeModpack();
+
+        }
+
+
+        if (
+            modal.classList.contains("active")
+        ) {
+
+            if (
+                event.key === "ArrowRight"
+            ) {
+
+                nextImage();
+
+            }
+
+
+            if (
+                event.key === "ArrowLeft"
+            ) {
+
+                previousImage();
+
+            }
+
+        }
+
+    }
+);
